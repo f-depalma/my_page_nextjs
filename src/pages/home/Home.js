@@ -12,13 +12,13 @@ import Section7 from "./Section7"
 export default function Home() {
 
     const sections = [
-        <Section1 />,
-        <Section2 />,
-        <Section3 />,
-        <Section4 />,
-        <Section5 />,
-        <Section6 />,
-        <Section7 />
+        <Section1 key="1"/>,
+        <Section2 key="2"/>,
+        <Section3 key="3"/>,
+        <Section4 key="4"/>,
+        <Section5 key="5"/>,
+        <Section6 key="6"/>,
+        <Section7 key="7"/>
     ]
 
     const screenHeight = useWindowHeight()
@@ -27,12 +27,11 @@ export default function Home() {
     const visibilities = useVisibilities(sections.length)
 
     const contents = sections.map((content, idx) => {
-        return <Section
-            key={idx}
-            visibility={findVisibility(visibilities, idx)}
-        >
-            {content}
-        </Section>
+        return (
+            <Section key={idx} visibility={findVisibility(visibilities, idx)}>
+                {content}
+            </Section>
+        )
     })
 
     function findVisibility(list, id) {
