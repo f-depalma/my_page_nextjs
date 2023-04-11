@@ -1,19 +1,42 @@
-# ==== CONFIGURE =====
-# Use a Node 16 base image
-FROM node:19-alpine 
-# Set the working directory to /app inside the container
+# Install dependencies only when needed
+FROM node:16-alpine AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
-# Copy app files
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Rebuild the source code only when needed
+FROM node:16-alpine AS builder
+
+WORKDIR /app
+
+COPY --from=deps /app/node_modules ./node_modules
+
 COPY . .
-# ==== BUILD =====
-# Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
-RUN npm ci 
-# Build the app
-RUN npm run build
-# ==== RUN =======
-# Set the env to "production"
+
+RUN yarn build
+
+# Production image, copy all the files and run next
+FROM node:16-alpine AS runner
+WORKDIR /app
+
 ENV NODE_ENV production
-# Expose the port on which the app will be running (3000 is the default that `serve` uses)
+
+RUN addgroup --system --gid 1001 bloggroup
+RUN adduser --system --uid 1001 bloguser
+
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --chown=bloguser:bloggroup /app/.next/standalone ./
+COPY --from=builder --chown=bloguser:bloggroup /app/.next/static ./.next/static
+
+USER bloguser
+
 EXPOSE 3000
-# Start the app
-CMD npm run start
+
+ENV PORT 3000
+
+CMD ["node", "server.js"]
