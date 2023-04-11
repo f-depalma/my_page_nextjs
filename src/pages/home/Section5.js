@@ -1,10 +1,10 @@
-import { reviews } from "../resurce/reviews"
+import { reviews } from "../../resource/reviews"
 import Review from "./Review"
 
 export default function Section5() {
 
     const reviewsElement = reviews.map((review, idx) => (
-        <Review props={review} key={idx}/>
+        <Review {...review} key={idx}/>
     ))
 
     return (

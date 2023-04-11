@@ -1,9 +1,9 @@
-import { companies } from "../resurce/companies"
+import { companies } from "../../resource/companies"
 import Product from "./Product"
 
 export default function Section3() {
 
-    const companiesElement = companies.map((product, idx) => <Product key={idx} props={product} />)
+    const companiesElement = companies.map((product, idx) => <Product key={idx} {...product} />)
 
     return (
         <div className="companies text-neutral-800 flex flex-col items-center h-full">

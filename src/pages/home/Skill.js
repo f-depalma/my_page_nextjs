@@ -1,4 +1,4 @@
-export default function Skill({ props: { icon, name, description } }) {
+export default function Skill({ icon, name, description }) {
     return (
         <div className="skill w-80 px-6">
             <img src={icon} className="pb-4 w-32 h-32 object-contain m-auto" />

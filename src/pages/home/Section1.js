@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Section1() {
     const [visible, setVisible] = useState(false)

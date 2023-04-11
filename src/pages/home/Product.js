@@ -1,4 +1,4 @@
-export default function Product({ props: { icon, name, company, description } }) {
+export default function Product({ icon, name, company, description }) {
     return (
         <div className="product w-60 p-6 rounded bg-white shadow-lg">
             <img src={icon} className="pb-4 w-32 h-32 object-contain m-auto" />

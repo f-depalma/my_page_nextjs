@@ -1,9 +1,9 @@
-import { skills } from "../resurce/skills"
+import { skills } from "../../resource/skills"
 import Skill from "./Skill"
 
 export default function Section2() {
 
-    const skillComponents = skills.map((skill, idx) => <Skill key={idx} props={skill} />)
+    const skillComponents = skills.map((skill, idx) => <Skill key={idx} {...skill} />)
 
     return (
         <div className="bg-white text-neutral-800 flex flex-col items-center h-full">

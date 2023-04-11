@@ -1,4 +1,4 @@
-export default function Review({ props: { image, name, logo, description, review } }) {
+export default function Review({ image, name, logo, description, review }) {
     return (
         <div className="flex flex-col justify-start items-center w-80">
             <img src={image} className="h-32 w-32 mb-4 rounded-full object-cover"/>
