@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: my-page
+    image: my-page
+    build:
+      context: .
+    ports:
+      - "80:80"
