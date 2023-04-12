@@ -9,7 +9,7 @@ export default function ContactMe() {
                 <p className="text-lg mb-8">If you have a general enquiry, use the contact form to message me.</p>
             </div>
             <form id="contactform" className="rounded-xl p-0 sm:p-10" action="https://formsubmit.io/send/e5d08bf4-5498-4dc6-a3f5-45d3cc776a7d" method="POST">
-                <input name="_redirect" type="hidden" id="name" value="/" />
+                <input name="_redirect" type="hidden" id="name" value="http://francescodepalma.com/" />
 
                 <input className={inputCss} name="name" type="text" id="name" placeholder="Name" required />
                 <input className={inputCss} name="email" type="email" id="email" placeholder="E-mail" required />
