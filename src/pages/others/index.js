@@ -39,10 +39,10 @@ export async function getServerSideProps() {
 
         return {
             props: {
-                videos: resJson
+                videos: videos
             }
         }
     } catch (err) {
-        console.log(err)
+        throw new Error(err)
     }
 }
