@@ -1,5 +1,5 @@
-import Header from "./Header";
-import MyProjects from "./my-projects/MyProjects";
+import Header from "../Header";
+import MyProjects from "./MyProjects";
 
 export default function MyProjectsMain() {
     return (

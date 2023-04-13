@@ -21,7 +21,7 @@ export async function getServerSideProps() {
                 {
                     id: item.id.videoId,
                     title: item.snippet.title,
-                    thumbnail: item.snippet.thumbnails.high.url,
+                    thumbnail: `http://img.youtube.com/vi/${item.id.videoId}/maxresdefault.jpg`,
                     description: item.snippet.description,
                     date: item.snippet.publishedAt,
                     views: 0,

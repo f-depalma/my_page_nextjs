@@ -1,5 +1,5 @@
-import ContactMe from "./contact-me/ContactMe";
-import Header from "./Header";
+import ContactMe from "./ContactMe";
+import Header from "../Header";
 
 export default function ContactMeMain() {
     return (
