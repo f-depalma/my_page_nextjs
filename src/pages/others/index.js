@@ -43,6 +43,10 @@ export async function getServerSideProps() {
             }
         }
     } catch (err) {
-        throw new Error(err)
+        return {
+            props: {
+                videos: err
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ export default function Others({ videos }) {
 
     return (
         <div className="pt-24 h-full flex flex-col justify-start items-center">
-            {videos}
+            {JSON.stringify(videos)}
             {/* <fieldset className="youtube w-5/6 mt-10 rounded-lg border border-1 border-yellow-600 p-4 block overflow-auto">
                 <legend className="ml-4 px-4 flex flex-row items-center text-lg">
                     <img src="Youtube_logo.png" className="h-6 mr-4" />
