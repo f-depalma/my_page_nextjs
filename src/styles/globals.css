@@ -51,7 +51,8 @@ body {
 
 .skill,
 .product {
-  min-width: 20rem;
+  min-width: 10rem;
+  max-width: 20rem;
 }
 
 .companies {
