@@ -45,7 +45,7 @@ export async function getServerSideProps() {
     } catch (err) {
         return {
             props: {
-                videos: err
+                videos: process.env.YOUTUBE_API_KEY
             }
         }
     }
