@@ -8,3 +8,5 @@ services:
       context: .
     ports:
       - "3000:3000"
+    environment:
+      - YOUTUBE_API_KEY=AIzaSyB8WlRSwmND88vW73HIej_MC3GIiUPULP8

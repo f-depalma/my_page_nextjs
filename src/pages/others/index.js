@@ -11,6 +11,7 @@ export default function OthersMain({ videos }) {
 }
 
 export async function getServerSideProps() {
+    console.log(process.env.YOUTUBE_API_KEY)
     try {
         const res = await fetch(`https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCWdplN91PWkkB_DKo5Ov9nQ&maxResults=25&key=${process.env.YOUTUBE_API_KEY}`);
         const resJson = await res.json()
@@ -43,10 +44,6 @@ export async function getServerSideProps() {
             }
         }
     } catch (err) {
-        return {
-            props: {
-                videos: process.env.YOUTUBE_API_KEY
-            }
-        }
+        console.log(err)
     }
 }
