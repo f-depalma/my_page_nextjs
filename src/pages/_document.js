@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { ErrorBoundary } from './error-boundary'
+import ErrorBoundary from './error-boundary'
 
 export default function Document() {
   return (
