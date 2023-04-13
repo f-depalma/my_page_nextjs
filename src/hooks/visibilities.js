@@ -5,7 +5,7 @@ import { Visibility } from "../Utils/Visibility";
 export const useVisibilities = (elements) => {
 
     const _visibilities = []
-    
+
     for (let i = 0; i < elements; i++) {
         _visibilities.push(new Visibility(i))
     }
@@ -39,8 +39,11 @@ export const useVisibilities = (elements) => {
             const perc = scrollPosition % 1000 / 1000
 
             if (perc > 0) {
-                tuneVisibility(section, 1 - perc)
-                tuneVisibility(section + 1, perc)
+                for (let i = 0; i < elements; i++) {
+                    if (i === section) tuneVisibility(i, 1 - perc)
+                    else if (i === section + 1) tuneVisibility(i, perc)
+                    else tuneVisibility(i, 0)
+                }
             }
         }
 

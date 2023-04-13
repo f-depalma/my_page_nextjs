@@ -2,7 +2,7 @@ import Video from "./Video"
 
 export default function Others({ videos }) {
 
-    const videoElments = videos.map((video) => <Video key={video.id} {...video} />)
+    const videoElments = videos?.map((video) => <Video key={video.id} {...video} />)
 
     return (
         <div className="pt-24 h-full flex flex-col justify-start items-center">
