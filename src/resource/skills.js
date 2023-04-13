@@ -1,6 +1,6 @@
 export const skills = [
     {
-        icon: "React-icon.svg",
+        icon: "react-icon.svg",
         name: "React",
         description: "I have recently studied this amazing library."
     },
