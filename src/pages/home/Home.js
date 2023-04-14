@@ -1,4 +1,4 @@
-import { useWindowHeight } from "../../hooks/window-height"
+import useWindowSize  from "../../hooks/window-resize"
 import Section from "./Section"
 import Section1 from "./Section1"
 import Section2 from "./Section2"
@@ -21,8 +21,9 @@ export default function Home() {
         <Section7 key="7"/>
     ]
 
-    const screenHeight = useWindowHeight()
-    const height = screenHeight + ((sections.length - 1) * 1000);
+    const screenSize = useWindowSize()
+
+    const height = screenSize.height + ((sections.length - 1) * 1000);
 
     const visibilities = useVisibilities(sections.length)
 

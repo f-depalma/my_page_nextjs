@@ -8,35 +8,5 @@ export const skills = [
         icon: "Angular-icon.svg",
         name: "Angular",
         description: "With 3 years of experience I'm ready to create your dream website."
-    },
-    {
-        icon: "Angular-icon.svg",
-        name: "Angular",
-        description: "With 3 years of experience I'm ready to create your dream website."
-    },
-    {
-        icon: "Angular-icon.svg",
-        name: "Angular",
-        description: "With 3 years of experience I'm ready to create your dream website."
-    },
-    {
-        icon: "Angular-icon.svg",
-        name: "Angular",
-        description: "With 3 years of experience I'm ready to create your dream website."
-    },
-    {
-        icon: "Angular-icon.svg",
-        name: "Angular",
-        description: "With 3 years of experience I'm ready to create your dream website."
-    },
-    {
-        icon: "Angular-icon.svg",
-        name: "Angular",
-        description: "With 3 years of experience I'm ready to create your dream website."
-    },
-    {
-        icon: "Angular-icon.svg",
-        name: "Angular",
-        description: "With 3 years of experience I'm ready to create your dream website."
     }
 ]
