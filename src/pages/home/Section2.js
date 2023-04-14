@@ -13,13 +13,13 @@ export default function Section2() {
         <div className="bg-white text-neutral-800 flex flex-col justify-center items-center h-full p-8">
             <h1 className="text-xl lg:text-4xl text-zinc-700 text-center mt-2 lg:mt-10">TECHNOLOGIES</h1>
             <div className="flex flex-row w-full h-full justify-between items-center">
-                <Arrow name="left-2" left={true} elemRef={container} color="text-zinc-800" />
+                <Arrow left={true} elemRef={container} color="text-zinc-800" />
                 <div ref={container} className="w-10/12 flex justify-start overflow-x-scroll" style={{ height: "inherit" }}>
                     <div className="flex flex-col max-h-full justify-around flex-wrap gap-8 m-auto" style={{ width: "inherit" }}>
                         {skillComponents}
                     </div>
                 </div>
-                <Arrow name="right-2" left={false} elemRef={container} color="text-zinc-800"/>
+                <Arrow left={false} elemRef={container} color="text-zinc-800"/>
             </div>
         </div>
     )

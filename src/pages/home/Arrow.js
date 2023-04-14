@@ -1,7 +1,7 @@
 import useWindowSize from "@/hooks/window-resize"
 import { useEffect, useState } from "react"
 
-export default function Arrow({ name, left, elemRef, color }) {
+export default function Arrow({ left, elemRef, color }) {
 
     const [show, setShow] = useState(false)
     const [interval, setIntState] = useState(undefined)
@@ -11,7 +11,7 @@ export default function Arrow({ name, left, elemRef, color }) {
     const rightArrow = "M9 5l7 7-7 7"
 
     useEffect(() => {
-        setShow(elemRef.current.scrollWidth >= elemRef.current.offsetWidth)
+        checkScrollPos()
     }, [windowSize]);
     
     function scroll() {
@@ -23,18 +23,17 @@ export default function Arrow({ name, left, elemRef, color }) {
         }
     }
 
-    useEffect(() => {
-
-        function checkScrollPos() {
-            if (left && elemRef.current.scrollLeft === 0 ||
-                !left && elemRef.current.scrollWidth - elemRef.current.scrollLeft === elemRef.current.offsetWidth) {
-                stopScroll()
-                setShow(false)
-            } else {
-                setShow(true)
-            }
+    function checkScrollPos() {
+        if (left && elemRef.current.scrollLeft === 0 ||
+            !left && elemRef.current.scrollWidth - elemRef.current.scrollLeft === elemRef.current.offsetWidth) {
+            stopScroll()
+            setShow(false)
+        } else {
+            setShow(true)
         }
+    }
 
+    useEffect(() => {
         checkScrollPos()
 
         elemRef.current.addEventListener("scroll", checkScrollPos)
