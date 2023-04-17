@@ -12,5 +12,12 @@ export const projects = [
         description: "Work in progress",
         linkGithub: "https://github.com/f-depalma/dashboard",
         linkWebsite: "http://dashboard.francescodepalma.com"
+    },
+    {
+        title: "Snake",
+        thumbnail: "snake.png",
+        description: "My first project with JQuery (2018)",
+        linkGithub: "https://github.com/f-depalma/snake",
+        linkWebsite: "http://snake.francescodepalma.com"
     }
 ]
