@@ -53,13 +53,20 @@ export const skills = [
         icon: "dotnet.png",
         name: ".NET",
         description: ""
-    },{
+    },
+    {
         icon: "github.png",
         name: "Git",
         description: ""
-    },{
+    },
+    {
         icon: "aws.png",
         name: "AWS EC2",
+        description: ""
+    },
+    {
+        icon: "gh-action.png",
+        name: "GitHub Action",
         description: ""
     },
     {
