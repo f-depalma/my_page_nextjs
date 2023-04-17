@@ -11,7 +11,7 @@ export default function Header() {
                     <Link href="/my-projects">My Projects</Link>
                 </div>
                 <div className="px-6 sm:px-8 nav--item text-gray-200 hover:text-gray-400 hover:cursor-pointer text-xs sm:text-base">
-                    <Link href="/others">Others</Link>
+                    <Link href="/others">Hobbies</Link>
                 </div>
                 <div className="px-6 sm:px-6 py-2 flex flex-col justify-center bg-yellow-600 text-black rounded nav--item hover:text-white hover:bg-zinc-800 hover:cursor-pointer text-xs sm:text-base">
                     <Link href="/contact-me">Contact Me</Link>

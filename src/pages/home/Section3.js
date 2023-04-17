@@ -10,11 +10,11 @@ export default function Section3() {
 
     return (
         <div className="companies text-neutral-800 flex flex-col justify-start items-center h-full p-4">
-            <h1 className="text-xl lg:text-4xl text-zinc-600 text-center my-auto  mt-2 lg:mt-10">PRODUCTS</h1>
-            <div className="flex flex-row w-full h-full justify-between items-center">
+            <h1 className="h-1/5 text-xl lg:text-4xl text-zinc-600 text-center my-auto mt-2 lg:mt-10 flex items-center">PRODUCTS</h1>
+            <div className="flex flex-row w-full h-4/5 justify-between items-center">
                 <Arrow left={true} elemRef={container} color="text-zinc-800"/>
-                <div ref={container} className="w-10/12 overflow-x-scroll flex flex-row justify-start pr-0">
-                    <div className="w-fit flex flex-row justify-center gap-x-12 items-center m-auto">
+                <div ref={container} className="w-10/12 overflow-x-scroll flex h-full overflow-y-hidden">
+                    <div className="flex flex-row justify-center gap-8 items-streach m-auto" >
                         {companiesElement}
                     </div>
                 </div>

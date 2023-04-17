@@ -5,11 +5,11 @@ export default function Section4() {
 
     return (
         <div className="bg-black flex flex-col justify-end sm:justify-center items-start p-8 h-full overflow-x-scroll">
-            <div className="flex flex-col justify-center flex-wrap h-full items-center gap-8">
+            <div className="flex flex-col justify-center flex-wrap h-full gap-8">
                 
                 <div className="w-60 md:w-72 lg:w-full">
                     <div className="flex flex-row justify-center h-24">
-                        <img src="VIA-logo.png" className="w-9/12 lg:w-80 z-10 object-contain"></img>
+                        <img src="VIA-logo.png" className="w-9/12 lg:mr-auto lg:w-80 z-10 object-contain"></img>
                         <div className=" w-3/4 h-24 lg:top-auto lg:fixed lg:bottom-0 lg:right-20 lg:h-4/6 lg:w-full lg:opacity-70 z-0 overflow-hidden lg:overflow-visible">
                             <img src="Subject.png" className="lg:h-full lg:absolute lg:bottom-0 lg:right-0 rounded-full lg:rounded-none object-contain float-right" />
                         </div>

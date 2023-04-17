@@ -18,9 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   -webkit-user-select: none;
   /* Safari */
   -ms-user-select: none;
@@ -30,10 +33,10 @@ body {
 }
 
 .face-image {
-  height: 80%;
+  height: calc(100vh - 100px);
   position: absolute;
-  top: 150px;
-  left: -200px;
+  bottom: 0;
+  left: calc(min(20vw, 150px)*-1);
   opacity: 0.6;
 }
 
@@ -55,29 +58,23 @@ body {
   opacity: 0;
 }
 
-.skill,
-.product {
-  min-width: 10rem;
-  max-width: 20rem;
-}
 
 .companies {
-  background-color: #eee;
-}
-
-.product:hover {
-  opacity: 0.6;
-  transition: opacity 0.5s;
+  background-color: #eaeaea;
 }
 
 .reviews {
-  background-image: url('../../public/map.jpg');
+  background-image: url("../../public/map.jpg");
   background-position: 50%;
   background-size: cover;
 }
 
 .youtube {
   min-width: 210px;
+}
+
+.carousel--img {
+  transition: all 250ms linear 2s;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
