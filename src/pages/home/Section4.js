@@ -18,9 +18,9 @@ export default function Section4() {
                     <h2 className="text-sm lg:text-base">3<sup>rd</sup> Semester</h2>
                 </div>
 
-                <div className="flex flex-col z-10 overflow-auto">
+                <div className="flex flex-col z-10 overflow-hidden">
                     <div className="p-1.5 w-full inline-block align-middle h-full">
-                        <table className="block h-full overflow-y-auto rounded">
+                        <table className="block h-full overflow-y-auto overflow-x-hidden rounded">
                             <thead className="bg-yellow-600 sticky top-0">
                                 <tr>
                                     <th scope="col"
