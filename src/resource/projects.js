@@ -9,7 +9,7 @@ export const projects = [
     {
         title: "Dashboard",
         thumbnail: "dashboard.png",
-        description: "Work in progress",
+        description: "Dashboard POC",
         linkGithub: "https://github.com/f-depalma/dashboard",
         linkWebsite: "http://dashboard.francescodepalma.com"
     },
