@@ -12,7 +12,7 @@ export default function Section1() {
             <h1 className='md:text-7xl text-4xl z-10 text-center'>FRANCESCO DE PALMA</h1>
             <br />
             <h2 className='md:text-4xl text-xl z-10 text-center'>
-                Full-stack Software Developer
+                Software Developer
                 <FontAwesomeIcon className="pl-4 text-yellow-600" icon={faLaptopCode} beat />
             </h2>
         </div>
