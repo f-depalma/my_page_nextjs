@@ -33,10 +33,10 @@ body {
 }
 
 .face-image {
-  height: calc(100vh - 100px);
+  height: min(75vh, calc(100vh - 100px));
   position: absolute;
   bottom: 0;
-  left: calc(min(20vw, 150px)*-1);
+  left: max(-12vh, -140px);
   opacity: 0.6;
 }
 
