@@ -19,5 +19,12 @@ export const reviews = [
         description: "Student STE at VIA",
         logo: "VIA-logo-dark.jpg",
         review: "I have been impressed by his dedication. He is always willing to go above and beyond to ensure that the project is a success." 
+    },
+    {
+        image: "elon.jpg",
+        name: "Elon Musk",
+        description: "Business magnate",
+        logo: "spacex.jpg",
+        review: "Francesco is a brilliant developer. He is a foundamental asset in my new secret project about *** ******." 
     }
 ]
