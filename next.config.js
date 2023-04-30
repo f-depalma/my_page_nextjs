@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    outputStandalone: true,
+    output: 'standalone'
+  },
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true
   },
 }
 

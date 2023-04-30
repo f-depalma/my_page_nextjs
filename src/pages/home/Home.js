@@ -11,6 +11,8 @@ import Section7 from "./Section7"
 
 export default function Home() {
 
+    const pageHeight = 1000
+
     const sections = [
         <Section1 key="1"/>,
         <Section2 key="2"/>,
@@ -23,7 +25,7 @@ export default function Home() {
 
     const screenSize = useWindowSize()
 
-    const height = screenSize.height + ((sections.length - 1) * 1000);
+    const height = screenSize.height + ((sections.length - 1) * pageHeight);
 
     const visibilities = useVisibilities(sections.length)
 
