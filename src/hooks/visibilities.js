@@ -48,15 +48,15 @@ export const useVisibilities = (elements) => {
             tuneVisibility(
               i,
               isScrollingDown
-                ? Math.cos(angle) / 2 + 0.6
-                : 0.5 - Math.sin(angle) / 2
+                ? 1 - Math.sin(angle) / 2
+                : Math.cos(angle) / 2
             );
           else if (i === section + 1)
             tuneVisibility(
               i,
               isScrollingDown
-                ? 1 - Math.cos(angle) / 2 - 0.6
-                : 0.5 + Math.sin(angle) / 2
+                ? Math.sin(angle) / 2
+                : 1 - Math.cos(angle) / 2
             );
           else tuneVisibility(i, 0);
         }

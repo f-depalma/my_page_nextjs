@@ -11,8 +11,8 @@ export class Visibility {
     }
 
     setVisibility(value) {
-        this.visibility = value > 0 ? 'visible' : 'hidden'
-        this.opacity = value > 0.95 ? 1 : value < 0.05 ? 0 : value
+        this.visibility = value > 0.1 ? 'visible' : 'hidden'
+        this.opacity = value > 0.90 ? 1 : value < 0.1 ? 0 : value
     }
 
     getCss() {
