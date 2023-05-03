@@ -41,7 +41,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: fdepalma95/my_page:latest
+          tags: fdepalma95/my_page_edited:latest
 
       - name: Docker Pull & Run From Hub
         uses: appleboy/ssh-action@master
@@ -51,7 +51,7 @@ jobs:
           key: ${{secrets.ACTION_PRIVATE_KEY}}
           envs: GITHUB_SHA
           script: |
-            sudo docker pull fdepalma95/my_page
-            sudo docker stop my_page
-            sudo docker rm my_page
-            sudo docker run -e YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }} --detach --name my_page -p 2000:3000 fdepalma95/my_page
+            sudo docker pull fdepalma95/my_page_edited
+            sudo docker stop my_page_edited
+            sudo docker rm my_page_edited
+            sudo docker run -e YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }} --detach --name my_page_edited -p 5000:3000 fdepalma95/my_page_edited
